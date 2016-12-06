@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>GarbageCollector</title>
+</head>
+<body>
+	<h1>Lixeiras</h1>
+	<table>
+      <tr>
+        <th>ID</th>
+        <th>Peso</th>
+        <th>Status Coleta</th>
+        <th>Status Capacidade</th>
+        <th>Localização</th>
+      </tr>
+      <tr th:each="lixeira : ${lixeiras}">
+        <td th:text="${lixeira.id_}"></td>
+        <td th:text="${lixeira.peso_}"></td>
+        <td th:text="${lixeira.statusColeta_}"></td>
+        <td th:text="${lixeira.statusCapacidade_}"></td>
+        <td th:text="${lixeira.localizacao_}"></td>
+      </tr>
+    </table>
+</body>
+</html>
